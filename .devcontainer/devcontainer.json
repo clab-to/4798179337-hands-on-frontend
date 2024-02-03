@@ -13,10 +13,7 @@
   },
   "customizations": {
     "vscode": {
-      "extensions": [
-        "ms-azuretools.vscode-azurefunctions",
-        "dbaeumer.vscode-eslint",
-      ],
+      "extensions": ["ms-azuretools.vscode-azurefunctions", "dbaeumer.vscode-eslint"],
     },
   },
 }
