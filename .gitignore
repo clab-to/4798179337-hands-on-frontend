@@ -2,6 +2,8 @@
 
 #VSCode
 .vscode/
+!.vscode/settings.json
+!.vscode/launch.json
 
 # dependencies
 /node_modules
