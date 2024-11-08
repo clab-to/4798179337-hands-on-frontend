@@ -5,5 +5,6 @@ type Data = {
 };
 
 export default function handler(req: NextApiRequest, res: NextApiResponse<Data>) {
+  console.dir(req, { depth: null })
   res.status(200).json({ name: 'John Doe' });
 }
