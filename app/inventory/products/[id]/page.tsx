@@ -23,8 +23,8 @@ type InventoryData = {
   inventory: number;
 };
 
-export default function Page() {
-  const param = { id: 1 };
+export default function Page({ params }: { params: { id: string } }) {
+  const param = { id: Number(params.id) ?? 1 };
   const ProductDataDefault: ProductData = Object.freeze({
     id: 0,
     name: '',
