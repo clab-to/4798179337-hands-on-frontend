@@ -2,26 +2,10 @@
 
 import Link from 'next/link';
 
+import { InventoryData, ProductData } from '@/types/types';
 import { useEffect, useState } from 'react';
 import inventoriesData from '../sample/dummy_inventories.json';
 import productsData from '../sample/dummy_products.json';
-
-type ProductData = {
-  id: number | null;
-  name: string;
-  price: number;
-  description: string;
-};
-
-type InventoryData = {
-  id: number;
-  type: string;
-  date: string;
-  unit: number;
-  quantity: number;
-  price: number;
-  inventory: number;
-};
 
 export default function Page({ params }: { params: { id: string } }) {
   const param = { id: Number(params.id) ?? 1 };
