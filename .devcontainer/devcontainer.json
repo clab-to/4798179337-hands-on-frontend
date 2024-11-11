@@ -13,7 +13,18 @@
   },
   "customizations": {
     "vscode": {
-      "extensions": ["ms-azuretools.vscode-azurefunctions", "dbaeumer.vscode-eslint"],
+      "extensions": [
+        "ms-azuretools.vscode-azurefunctions",
+        "dbaeumer.vscode-eslint",
+        "esbenp.prettier-vscode",
+        "mhutchie.git-graph",
+        "donjayamanne.githistory",
+        "eamodio.gitlens",
+        "oderwat.indent-rainbow",
+        "VisualStudioExptTeam.vscodeintellicode",
+        "VisualStudioExptTeam.intellicode-api-usage-examples",
+        "shardulm94.trailing-spaces",
+      ],
     },
   },
 }
