@@ -58,7 +58,7 @@ export default function Page() {
 
   // 更新・削除処理、更新・削除行の表示状態を保持
   const [editingRow, setEditingRow] = useState(0);
-  const handleEditRow: any = (id: number) => {
+  const handleEditRow = (id: number) => {
     setShownNewRow(false);
     setEditingRow(id);
     const selectProduct: ProductData = data.find((v) => v.id === id) as ProductData;
@@ -69,9 +69,9 @@ export default function Page() {
       description: selectProduct.description,
     });
   };
-  const handleEditCancel: any = (id: number) => setEditingRow(0);
-  const handleEdit: any = (id: number) => setEditingRow(0);
-  const handleDelete: any = (id: number) => setEditingRow(0);
+  const handleEditCancel = () => setEditingRow(0);
+  const handleEdit = () => setEditingRow(0);
+  const handleDelete = () => setEditingRow(0);
 
   return (
     <>
@@ -136,9 +136,9 @@ export default function Page() {
                 </td>
                 <td></td>
                 <td>
-                  <button onClick={() => handleEditCancel(data.id)}>キャンセル</button>
-                  <button onClick={() => handleEdit(data.id)}>更新する</button>
-                  <button onClick={() => handleDelete(data.id)}>削除する</button>
+                  <button onClick={() => handleEditCancel()}>キャンセル</button>
+                  <button onClick={() => handleEdit()}>更新する</button>
+                  <button onClick={() => handleDelete()}>削除する</button>
                 </td>
               </tr>
             ) : (
@@ -154,7 +154,7 @@ export default function Page() {
                   <button onClick={() => handleEditRow(data.id)}>更新・削除</button>
                 </td>
               </tr>
-            )
+            ),
           )}
         </tbody>
       </table>
