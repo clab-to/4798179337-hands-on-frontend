@@ -2,21 +2,9 @@
 
 import Link from 'next/link';
 
+import { InputData, ProductData } from '@/types/types';
 import React, { useEffect, useState } from 'react';
 import productsData from './sample/dummy_products.json';
-type ProductData = {
-  id: number | null;
-  name: string;
-  price: number;
-  description: string;
-};
-
-type InputData = {
-  id: string;
-  name: string;
-  price: string;
-  description: string;
-};
 
 export default function Page() {
   // 読み込みデータを保持

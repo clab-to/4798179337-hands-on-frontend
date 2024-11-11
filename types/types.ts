@@ -14,3 +14,10 @@ export type InventoryData = {
   price: number;
   inventory: number;
 };
+
+export type InputData = {
+  id: string;
+  name: string;
+  price: string;
+  description: string;
+};
