@@ -1,4 +1,13 @@
 {
-    "explorer.compactFolders": false,
-    "editor.tabSize": 2
+  "explorer.compactFolders": false,
+  "editor.tabSize": 2,
+  // 関数シグネチャの暗黙的な戻り値の型について、インレイ ヒントを有効にします
+  "typescript.inlayHints.functionLikeReturnTypes.enabled": true,
+  // 暗黙的なパラメーター型へのインレイ ヒントを有効にします
+  "typescript.inlayHints.parameterTypes.enabled": true,
+  // プロパティ宣言の暗黙的な型へのインレイ ヒントを有効にします
+  "typescript.inlayHints.propertyDeclarationTypes.enabled": true,
+  // 暗黙的な変数型のインレイ ヒントを有効にします
+  "typescript.inlayHints.variableTypes.enabled": true,
+  "editor.inlayHints.enabled": "offUnlessPressed"
 }
