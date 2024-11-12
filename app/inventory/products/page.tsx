@@ -25,7 +25,7 @@ export default function Page() {
   // submit時のactionを分岐させる
   const [action, setAction] = useState<string>('');
   const onSubmit = (event: any): void => {
-    const data: ProductData = {
+    const _data: ProductData = {
       id: id,
       name: event.name,
       price: Number(event.price),
@@ -33,17 +33,17 @@ export default function Page() {
     };
     // actionによってHTTPメソッドと使用するパラメータを切り替える
     if (action === 'add') {
-      handleAdd(data);
+      handleAdd(_data);
     } else if (action === 'update') {
-      if (data.id === null) {
+      if (_data.id === null) {
         return;
       }
-      handleEdit(data);
+      handleEdit(_data);
     } else if (action === 'delete') {
-      if (data.id === null) {
+      if (_data.id === null) {
         return;
       }
-      handleDelete(data.id);
+      handleDelete(_data.id);
     }
   };
 
@@ -65,6 +65,7 @@ export default function Page() {
   const handleEditRow = (id: number | null) => {
     const selectedProduct: ProductData = data.find((v) => v.id === id) as ProductData;
     setId(selectedProduct.id);
+    setAction('');
     reset({
       name: selectedProduct.name,
       price: selectedProduct.price.toString(),
