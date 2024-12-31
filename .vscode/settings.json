@@ -9,5 +9,6 @@
   "typescript.inlayHints.propertyDeclarationTypes.enabled": true,
   // 暗黙的な変数型のインレイ ヒントを有効にします
   "typescript.inlayHints.variableTypes.enabled": true,
-  "editor.inlayHints.enabled": "offUnlessPressed"
+  "editor.inlayHints.enabled": "offUnlessPressed",
+  "git.enableCommitSigning": true
 }
